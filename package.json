@@ -4,7 +4,11 @@
   "description": "Platzi Video in React",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack-dev-server --config ./webpack.dev.config.js",
+    "build": "webpack",
+    "build:local": "webpack --env.NODE_ENV=local",
+    "build:prod": "webpack -p --env.NODE_ENV=production"
   },
   "repository": {
     "type": "git",
@@ -21,7 +25,9 @@
   },
   "homepage": "https://github.com/ArnoldRestrepo/platzi-video-react#readme",
   "dependencies": {
-
+    "prop-types": "^15.6.0",
+    "react": "16.1.1",
+    "react-dom": "16.1.1"
   },
   "devDependencies": {
     "babel-preset-stage-2": "6.24.1",
